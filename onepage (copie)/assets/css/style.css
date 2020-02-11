@@ -1,0 +1,100 @@
+header {
+    font-size: 30px;
+    position:fixed; /* NE PAS OUBLIER LES COORDONNEES top ET left */
+    top:0;
+    left:0;
+    background-color: white; /* TRANSPARENCE POUR VOIR LE FOND */
+    width:100%;
+    opacity:1;
+    padding:25px;
+    height:40px;
+    transition: all 0.5s linear;
+}
+
+header :hover {
+    color: black;
+}
+
+
+main {
+    margin-top: 100px;
+    background-color: white;
+}
+
+
+main img {
+    width: 50%;
+    float: right;
+}
+
+
+h1 {
+    font-size: 50px;
+    text-align: center;    
+    color: blue;
+}
+
+h2 {
+    text-align: center;
+    font-size: 40px;
+    color:rgb(214, 24, 40);
+}
+
+.container {
+    font-size: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+.container > div {
+    width:calc(100% /2 );
+}
+.doublecase {
+    font-size: 30px;
+    display: flex;
+    justify-content: right;
+}
+
+.rectangle1 {
+    margin-left: 200px;
+    text-align: center;
+    color: white;
+	width:200px;
+	height:100px;
+    background:#069;
+    box-shadow: 8px 8px 12px #aaa;
+    margin-top: 20px;
+}
+
+.rectangle2 {
+    text-align: center;
+    color: black;
+	width:800px;
+	height:100px;
+    background-color: white;
+    box-shadow: 8px 8px 12px #aaa;
+    margin-top: 20px;
+}
+
+nav a {
+    background-color: white;
+    font-size:30px;
+    transition: all 0.2s linear;
+    text-decoration: none; 
+    border: 1px solid rebeccapurple;
+    padding: 16px; /* ESPACE VIDE ENTRE LE TEXTE ET LA BORDURE */
+    border-radius:16px;
+}
+    
+nav a:hover {
+    color: white;
+    /* font-size:16px; */
+    background-color:black;
+    /* transform:rotate(-400deg); */
+    /*display:inline-block;*/
+    box-shadow: none;
+}
+
+
+section {
+    padding-top: 60px;
+}
