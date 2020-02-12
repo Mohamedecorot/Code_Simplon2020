@@ -9,11 +9,27 @@
 </head>
 <body>
     <header>
-    <nav>
+    <!--<nav>
         <a href="#s0">Informations personnelles</a>
         <a href="#s1">Expériences professionnelles</a>
         <a href="#s2">Diplômes/Formations</a>
         <a href="#s3">Informations complémentaires</a>
+        <a href="#s4">Pour me contacter</a>
+    </nav> -->
+    <nav>
+    <?php
+        $tableauNav = array("Informations personnelles","Expériences professionnelles","Diplômes/Formations","Informations complémentaires","Pour me contacter");
+
+        echo '<ul>';
+        foreach($tableauNav as $key=>$value)
+            {
+            echo 
+            <<<test
+            <a href="#s$key">$value</a>
+            test;
+            }
+        echo '</ul>';
+    ?>
     </nav>
     </header>
     <main>
