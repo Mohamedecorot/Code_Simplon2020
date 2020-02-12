@@ -77,3 +77,23 @@
                 <p>Anglais technique (TOEIC: 780) <br>Permis B et véhicule</p>
         </section>
         
+        <section id="s4">
+                <h2><hr> Pour me contacter <hr></h2>
+                <div class="formulaire"> 
+                        <form id="contact" action="#contact" method="POST">
+                                <input name="Nom" type="text" placeholder="Nom" autocomplete="off" required/><br>
+                                <input name="Prénom" type="text" placeholder="Prénom" required/><br>
+                                <input name="email" type="email" placeholder="Email"required/><br>
+                                <textarea name="message" maxlength="1000" placeholder="Votre message" required onkeyup="reste(this.value);"></textarea><br/>
+                                <span id="caracteres">1000</span> caractères restants <br>
+                                <script type="text/javascript">
+                                function reste(texte)
+                                        {
+                                        var restants=1000-texte.length;
+                                        document.getElementById('caracteres').innerHTML=restants;
+                                        }
+                                </script>
+                                <input type="submit" value="ENVOYER" class="submit"/>
+                                </form>
+                </div>
+        </section>

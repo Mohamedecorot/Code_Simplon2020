@@ -45,9 +45,11 @@ h2 {
     display: flex;
     justify-content: space-around;
 }
+
 .container > div {
     width:calc(100% /2 );
 }
+
 .doublecase {
     font-size: 30px;
     display: flex;
@@ -63,6 +65,14 @@ h2 {
     background:#069;
     box-shadow: 8px 8px 12px #aaa;
     margin-top: 20px;
+    ; 
+}
+
+.rectangle1:hover {
+    transition-property: background-color; 
+    transition-duration: 1s;
+    background-color: green;
+    
 }
 
 .rectangle2 {
@@ -77,11 +87,11 @@ h2 {
 
 nav a {
     background-color: white;
-    font-size:30px;
+    font-size: 25px;
     transition: all 0.2s linear;
     text-decoration: none; 
     border: 1px solid rebeccapurple;
-    padding: 16px; /* ESPACE VIDE ENTRE LE TEXTE ET LA BORDURE */
+    padding: 5px; /* ESPACE VIDE ENTRE LE TEXTE ET LA BORDURE */
     border-radius:16px;
 }
     
@@ -97,4 +107,49 @@ nav a:hover {
 
 section {
     padding-top: 60px;
+}
+
+.formulaire
+    {
+    background-color:grey;
+    padding: 15px;   
+    margin-bottom: 5px;
+    }
+
+form {
+    text-align: center;
+    margin-top: 0;
+}
+    
+.submit {
+    background-color: black;
+    padding: 12px 45px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    margin: 0;
+    font-weight: bold;
+}
+        
+textarea {
+    height: 100px;
+}
+        
+input, textarea {
+    margin-bottom: 10px;
+    font-size: 11pt;
+    padding: 15px 10px 10px;
+    border: 1px ;
+    background-color: white;
+    color: #787575;
+    border-radius: 5px;
+    width: 25%;
+    outline: none;
+    text-align: center;
+}
+
+footer {
+    text-align: center;    
 }

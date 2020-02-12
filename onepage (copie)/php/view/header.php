@@ -14,6 +14,7 @@
         <a href="#s1">Expériences professionnelles</a>
         <a href="#s2">Diplômes/Formations</a>
         <a href="#s3">Informations complémentaires</a>
+        <a href="#s4">Pour me contacter</a>
     </nav>
     </header>
     <main>
