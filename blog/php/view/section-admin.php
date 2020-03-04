@@ -15,15 +15,3 @@
 </section>
 
 
-<section id="section-articles">
-    <h2>supprimer un article</h2>
-    <form action="#section-articles" method="POST">
-    <input type="text" name="titre" required placeholder="entrez le titre de l'article à supprimer">
-    <button type="submit">envoyer votre message</button>
-    <div class="confirmation">
-        <?php require_once "php/controller/form-articles.php" ?>
-    </div>
-    </form>
-
-    
-</section>
