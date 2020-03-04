@@ -1,0 +1,97 @@
+h1
+{
+    color: red;
+    text-align: center;
+}
+
+h3
+{
+    color: royalblue;
+}
+
+body 
+{
+    background: url("fondjaune.png") fixed repeat;
+}
+
+
+.listeArticle
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.listeArticle article
+{
+    width: calc(100%/3);
+}
+
+article img
+{
+    width:100%;
+    height:30vh;
+    object-fit: cover;
+}
+
+footer a
+{
+    color: #FFF9DE;
+}
+
+#section-articles
+{
+    background-color:grey;
+    padding: 15px;   
+    margin-bottom: 5px;
+}
+
+form 
+{
+    text-align: center;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+    
+.submit 
+{
+    background-color: black;
+    padding: 12px 45px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    margin: 0;
+    font-weight: bold;
+}
+
+.submit:hover 
+{
+    color: white;
+    background-color:red;
+    box-shadow: none;
+}
+
+        
+textarea 
+{
+    height: 100px;
+}
+        
+input, textarea 
+{
+    display: flex;
+    margin-bottom: 10px;
+    font-size: 11pt;
+    padding: 15px 10px 10px;
+    border: 1px ;
+    background-color: white;
+    color: #787575;
+    border-radius: 5px;
+    width: 25%;
+    outline: none;
+    text-align: center;
+}

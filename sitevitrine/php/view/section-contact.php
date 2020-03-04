@@ -8,7 +8,7 @@
                 <button type="submit">envoyez votre message</button>
                 <div class="confirmation">
 <?php
-if (count($_REQUEST > 0))
+if (count($_REQUEST) > 0 )
 {
     $nom = $_REQUEST ["nom"];
     $email = $_REQUEST ["email"];
@@ -17,14 +17,15 @@ if (count($_REQUEST > 0))
 <<<CODESQL
 
 INSERT INTO contact 
-(id, nom`, email, message) 
+(nom, email, message) 
 VALUES 
 ('$nom', '$email', '$message');
 
 CODESQL;
 
-$pdo = new PDO("mysql:dbname=vitrine;host=localhost;charset=utf8;","root","")
-$pdo->exec($_REQUEST);
+$pdo = new PDO("mysql:dbname=vitrine;host=localhost;charset=utf8;","root","");
+echo "$requeteSQL";
+$pdo->exec($requeteSQL);
 
 }
 ?>
