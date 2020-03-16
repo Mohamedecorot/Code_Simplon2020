@@ -6,7 +6,7 @@ function filtrer($name="id")
     return $resultat;
 }
 
-// CREATE
+// ETAPE 1 : CREATE
 
 if ($identifiantFormulaire == "create")
 {

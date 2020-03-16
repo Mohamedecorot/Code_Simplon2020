@@ -12,17 +12,19 @@
 <section id="contact">
     <h2>Formulaire de contact</h2>
     <form id="create" action="#section-contact" method="POST">
-        <input type="text" name="nom" required placeholder="entrez votre nom et prénom">
-        <input type="email" name="email" required placeholder="entrez email">
-        <textarea name="message" cols="60" rows="6" required placeholder="entrez votre message"></textarea>
+        <input type="text" name="nom" placeholder="entrez votre nom">
+        <input type="email" name="email" placeholder="entrez email">
+        <textarea name="message" cols="60" rows="6" placeholder="entrez votre message"></textarea>
+        <!-- cette ligne permet de donner un identifiant invisible au formulaire -->
+        <input type="hidden" name="identifiantFormulaire" value="create">
         <button type="submit">envoyer votre message</button>
         <div class="confirmation">
             <?php 
-$identifiantFormulaire = $_REQUEST["identifiantFormulaire"] ?? "";
-if ($identifiantFormulaire == "create")
-{
-    require "filtreformulaire.php"; 
-}        
+                $identifiantFormulaire = $_REQUEST["identifiantFormulaire"] ?? "";
+                if ($identifiantFormulaire == "create")
+                {
+                    require "filtreformulaire.php"; 
+                }                        
             ?>
         </div>
     </form>
