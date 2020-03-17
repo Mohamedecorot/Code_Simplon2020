@@ -36,7 +36,7 @@
 <!-- READ -->
 
 <section>
-    <h2>LISTE DES ARTICLES</h2>
+    <h2>LISTE DES MESSAGES</h2>
     <table>
         <thead>                     <!-- TITRE DES COLONNES -->
             <tr>                    <!-- LIGNE => TABLE ROW => tr -->
@@ -47,49 +47,42 @@
             </tr>
         </thead>
         <tbody>                     <!-- LIGNES -->    
-            <?php
+
+<?php
 
 $requeteSQL =
 <<<CODESQL
 
 SELECT * FROM `contact`
-ORDER BY datePublication DESC
+ORDER BY message DESC
 
 CODESQL;
 
 
-//$tabAssoColonneValeur = [];
+$tabAssoColonneValeur = [];
 require "fonctionrequeteSQL.php";      // Je charge le code PHP pour envoyer la requete 
 $tabLigne = $pdoStatement->fetchAll(); // Je recupère mon tableau de resultat
 
-foreach($tabLigne as $tabAsso)
-{
-    extract($tabAsso); 
+$sql = 'SELECT * FROM contact';
+$req = $pdo->query($sql);
+while($row = $req->fetch()) {
+//echo $row['nom'].$row['email'].$row['message'].'<br/>';
+    $id = $row['id'];
+    $nom = $row['nom'];
+    $email = $row['email'];
+    $message = $row['message'];
     echo
 <<<CODEHTML
-
     <tr>
-    <td>$id</td> 
-    <td>$nom</td>
-    <td>$mail</td>
-    <td>$message</td>
-    <td> 
-        <button data-id="$id" class="update">modifier</button>
-        <!-- ON PEUT DONNER PLUSIEURS CLASSES A UNE BALISE -->
-        <div class="infosUpdate cache">
-            <input type="text" name="nom" required placeholder="entrer le nom" value="$nom">
-            <input type="mail" name="nom" required placeholder="entrer le mail" value="$mail">
-            <textarea name="message" cols="60" rows="8" required placeholder="entrer le message">$message</textarea>
-            <!-- POUR LE UPDATE ON DOIT SAVOIR QUELLE LIGNE ON VEUT MODIFIER -->
-            <input type="text" name="id" required placeholder="entrez id ligne" value="$id">
-        </div>
-    </td>
-    <td><button data-id="$id" class="delete">supprimer</button></td>  
-</tr>
-
+        <td>$id</td> 
+        <td>$nom</td>
+        <td>$email</td>
+        <td>$message</td>
+    </tr> 
 CODEHTML;
-}
 
+}
+$req->closeCursor();
 
 ?>
         </tbody>
