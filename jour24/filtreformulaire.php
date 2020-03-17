@@ -40,7 +40,7 @@ CODESQL;
         require_once "fonctionrequeteSQL.php";
 
         //Message de confirmation
-        echo "Votre article a été publié ($requeteSQL)";
+        echo "Votre message a été publié ";
     }
     else
     {
