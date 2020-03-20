@@ -34,7 +34,7 @@
 </section>
 
 <!-- READ -->
-
+<h1>PARTIE ADMINISTRATIF</h1>
 <section>
     <h2>LISTE DES MESSAGES</h2>
     <table>
@@ -87,6 +87,40 @@ $req->closeCursor();
 ?>
         </tbody>
     </table>
+</section>
+
+<!-- DELETE -->
+
+<section class="cache">
+    <h2>supprimer un message</h2>
+    <form id="delete" action="" method="POST">
+    <input type="text" name="id" required placeholder="entrez l'id du message à supprimer">
+    <button type="submit">envoyer votre message</button>
+    </form>
+
+<?php
+
+if (count($_REQUEST) > 0)
+{
+
+    $tabAssoColonneValeur = [
+        "id" => $_REQUEST["id"],
+    ];
+
+    
+    $requeteSQL   =
+<<<CODESQL
+
+DELETE FROM contact WHERE id = :id
+
+CODESQL;
+
+    require "fonctionrequeteSQL.php";      
+    echo "LE MESSAGE A ETE SUPPRIME ($requeteSQL)";
+}
+
+?>
+
 </section>
 
 
