@@ -1,0 +1,66 @@
+html, body {
+    width:100%;
+    height:100%;
+    font-size:15px;
+    padding:0;
+    margin:0;
+    background-color: rgb(180, 170, 170);
+}        
+
+header {
+    background: url("../img/background.jpg");
+    width:100%;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+header p {
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+}
+
+footer {
+    text-align: center;
+    color:white;
+}
+
+#formulaire {
+    text-align: center;
+}
+
+
+.listeArticle {
+    display:flex;
+    flex-wrap: wrap;
+    width:100%;
+}
+
+.apercu, h3{
+    color: black;
+}
+
+.listeArticle article {
+    background-color: gray;
+    margin:0.5rem;
+    width: calc( 100% / 3 - 1.5rem);
+    border: 0.5px solid black;
+    color: white;
+}
+      
+.apercu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+a {
+    color: white;
+    text-align: center;
+}
+

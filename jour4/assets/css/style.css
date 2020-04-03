@@ -1,0 +1,49 @@
+html, body {
+    margin: 0%;
+    padding: 0%;
+    margin-top: -15px;
+    }
+
+main {
+    text-align: center;
+    }
+    
+h1 {
+    font-family: arial ;
+    text-align: center;    
+    color:blue;
+    background-color: chartreuse;
+    padding: 1%;
+    }
+
+h2 {
+    font-family: arial ;
+    text-align: center;    
+    color: red;
+    background-color: yellow;
+    padding: 1%;
+    }
+
+h3
+    {
+    background-color: red;
+    font-family: arial;
+    text-align: center;    
+    }  
+
+.container
+    {
+    display: flex;
+    justify-content: space-around;
+    }
+
+nav a {
+    text-align: center;    
+    background: white;
+    border: 1px solid;
+    } 
+
+footer
+    {
+    text-align: center;    
+    }
